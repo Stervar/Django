@@ -1,9 +1,10 @@
-/* styles.css */
+/* styles.css
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
     background-color: #282c34;
     color: white;
     font-family: Arial, sans-serif;
@@ -20,4 +21,4 @@ body {
 .datetime:hover {
     background-color: #61dafb;
     transform: scale(1.05);
-}
+} */
