@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('i (5).webp') no-repeat center center fixed; /* Фоновое изображение галактики */
+    background-size: cover;
+    animation: starfield 10s infinite linear; /* Анимация звездного поля */
+}
+
+@keyframes starfield {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #00ff00; /* Ярко-зеленый текст */
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Неоновый эффект текста */
+    animation: fadeIn 2s ease-in-out; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center; /* Центрируем заголовок */
+}
+
+#time {
+    font-size: 36px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для времени */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Неоновая тень */
+    color: #00ff00; /* Ярко-зеленый текст */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#time:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* Ярче неоновая тень при наведении */
+}
