@@ -17,16 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from DER import views
-
-urlpatterns = [
-    path('', views.index),
-    path('admin/', admin.site.urls),
-]
-
 from django.urls import path
-from . import views
-
+from django.views.generic import TemplateView
+ 
 urlpatterns = [
-    path('current_datetime/', views.current_datetime, name='current_datetime'),
+    path("with-a-hat-and-a-basement/", TemplateView.as_view(template_name="with-a-hat-and-a-basement.html")),
+    path("map/", TemplateView.as_view(template_name="map.html")),
+    path("index/", TemplateView.as_view(template_name="index.html")),
+    path("feedback/", TemplateView.as_view(template_name="feedback.html")),
 ]
-
