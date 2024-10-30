@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from DER import views
-from django.urls import path
 from django.views.generic import TemplateView
- 
+from django.urls import path, include
+from django.shortcuts import render
+
+
 urlpatterns = [
-    path("with-a-hat-and-a-basement/", TemplateView.as_view(template_name="with-a-hat-and-a-basement.html")),
-    path("map/", TemplateView.as_view(template_name="map.html")),
-    path("index/", TemplateView.as_view(template_name="index.html")),
-    path("feedback/", TemplateView.as_view(template_name="feedback.html")),
-]
+    path('admin/', admin.site.urls),
+    path('', views.index),
+] 
+

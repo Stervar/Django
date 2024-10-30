@@ -4,16 +4,9 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
   
 def index(request):
-    return TemplateResponse(request,  "index.html")
+    return TemplateResponse(request,  "style.html")
 
-def index(request):
-    return TemplateResponse(request,  "feedback.html")
 
-def index(request):
-    return TemplateResponse(request,  "map.html")
-
-def index(request):
-    return TemplateResponse(request,  "with-a-hat-and-a-basement.html")
 
 
 
