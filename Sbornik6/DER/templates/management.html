@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Руководство города</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'newsPage' %}">Новости</a>
+        <a href="{% url 'management' %}">Руководство</a>
+    </nav>
+    <h1>Руководство города</h1>
+    <!-- Содержимое страницы руководства -->
+</body>
+</html>

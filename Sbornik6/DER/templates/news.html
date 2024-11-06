@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    Новости города
+{% endblock %}
+
+{% block content %}
+    <h1>Новости города</h1>
+
+    <!-- Содержимое страницы новостей -->
+    {% if news %}
+        <ul>
+            {% for el in news %}
+            <li><a href="/news/{{el.id}}">{{el.title}}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+    {% if post %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.text}}</p>
+    {% endif %}
+
+{% endblock %}

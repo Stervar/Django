@@ -23,5 +23,21 @@ function updateTime() {
     update(); // Начальное обновление
 }
 
-// Запускаем функцию после загрузки страницы
-document.addEventListener('DOMContentLoaded', updateTime);
+document.addEventListener('DOMContentLoaded', function() {
+    updateTime();
+
+    const mainContainer = document.querySelector('.main-container');
+    const iconSection = document.getElementById('iconSection');
+    const showIconBtn = document.getElementById('showIcon');
+    const backToTimeBtn = document.getElementById('backToTime');
+
+    showIconBtn.addEventListener('click', function() {
+        mainContainer.style.display = 'none';
+        iconSection.style.display = 'block';
+    });
+
+    backToTimeBtn.addEventListener('click', function() {
+        iconSection.style.display = 'none';
+        mainContainer.style.display = 'block';
+    });
+});
