@@ -9,13 +9,18 @@
 
     <!-- Содержимое страницы новостей -->
     {% if news %}
-        <ul>
+        <div class="news-list">
             {% for el in news %}
-            <li><a href="/news/{{el.id}}">{{el.title}}</a></li>
+            <div class="news-item">
+                <a href="/news/{{el.id}}">
+                    <img src="{{el.image}}" alt="{{el.title}}" />
+                    <h2>{{el.title}}</h2>
+                    <p>{{el.text}}</p>
+                </a>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     {% endif %}
-
 
     {% if post %}
         <h1>{{post.title}}</h1>
